@@ -3,7 +3,6 @@ package utility;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
-
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -24,12 +23,11 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.asserts.SoftAssert;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import pages.Homepage;
 
-import org.apache.poi.ss.util.NumberToTextConverter;
+
+
 
 public class Utilityclass2 {
 	public static WebDriver driver;
@@ -54,7 +52,6 @@ public class Utilityclass2 {
 		
 		}
 	public  Object[][] readExcel(String excelfile) throws IOException {
-		  
 		  XSSFWorkbook book=new XSSFWorkbook("./dataBB/"+excelfile+".xlsx");
 			XSSFSheet sheet = book.getSheetAt(0);
 			int rowcount = sheet.getLastRowNum(); 
@@ -70,7 +67,9 @@ public class Utilityclass2 {
 			}
 			book.close();
 			return data;
-	  }
+	  
+	}
+	
 
 
 	public static void click (WebElement element) {
