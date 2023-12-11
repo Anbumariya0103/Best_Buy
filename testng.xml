@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<parameter name="url" value="https://www.bestbuy.com/"></parameter>
+<listeners>
+<listener class-name ="utility.Listener2"></listener>
+</listeners>
+  <parameter name="browser" value="chrome"></parameter>
+  <test  thread-count="5" name="Test">
+   <classes>
+   <class name="testcase.TC_BB_003_CreatenewAccount"/>
+   <class name="testcase.TC_BB_004_Signin"/>
+   <class name="testcase.TC_BB_005_TitleValidation"/>
+   <class name="testcase.TC_BB_006_BottomLinkValidation"/>
+   <class name="testcase.TC_BB_007_AddItem_CheckoutAndConfirmPage"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

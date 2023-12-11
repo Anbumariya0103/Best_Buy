@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="chrome"/>
+  <parameter name="url" value="https://www.bestbuy.com/"/>
+  <listeners>
+    <listener class-name="utility.Listener2"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="testcase.TC_BB_004_Signin">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="setup"/>
+          <include name="browserLaunch"/>
+          <include name="TC_BB_004_Signin" invocation-numbers="1"/>
+        </methods>
+      </class> <!-- testcase.TC_BB_004_Signin -->
+      <class name="testcase.TC_BB_005_TitleValidation">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="browserLaunch"/>
+          <include name="TC_BB_005_TitleValidation"/>
+        </methods>
+      </class> <!-- testcase.TC_BB_005_TitleValidation -->
+      <class name="testcase.TC_BB_003_CreatenewAccount">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="browserLaunch"/>
+          <include name="TC_BB_003_CreatenewAccount" invocation-numbers="0 1"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.TC_BB_003_CreatenewAccount -->
+      <class name="testcase.TC_BB_007_AddItem_CheckoutAndConfirmPage">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="browserLaunch"/>
+          <include name="TC_BB_007_AddItem_CheckoutAndConfirmPage"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcase.TC_BB_007_AddItem_CheckoutAndConfirmPage -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
